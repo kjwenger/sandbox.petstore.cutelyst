@@ -8,7 +8,26 @@ Pet::~Pet()
 {
 }
 
-void Pet::index(Cutelyst::Context * c)
+void Pet::get(Cutelyst::Context * c, const QString & petId)
 {
-    c->response()->body() = "Matched Controller::Pet in Pet.";
+    c->response()->body() =
+R"({
+  "photoUrls": [ "aeiou" ],
+  "name": "doggie",
+  "id": 0,
+  "category": {
+    "name": "aeiou",
+    "id": 6
+  },
+  "tags": [ {
+    "name": "aeiou",
+    "id": 1
+  } ],
+  "status": "available"
+})";
+}
+
+void Pet::findByStatus(Cutelyst::Context * c)
+{
+    c->response()->body() = "{}";
 }

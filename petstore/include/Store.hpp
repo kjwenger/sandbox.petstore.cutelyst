@@ -9,6 +9,9 @@ public:
     explicit Store(QObject * parent = 0);
     ~Store();
 
-    C_ATTR(index, :Path(/store) :AutoArgs)
-    void index(Cutelyst::Context * c);
+    C_ATTR(inventory, :Path(/v2/store/inventory) :AutoArgs)
+    void inventory(Cutelyst::Context * c);
+
+    C_ATTR(order, :Path(/v2/store/order) :AutoArgs)
+    void order(Cutelyst::Context * c);
 };

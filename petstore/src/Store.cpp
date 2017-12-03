@@ -8,7 +8,12 @@ Store::~Store()
 {
 }
 
-void Store::index(Cutelyst::Context * c)
+void Store::inventory(Cutelyst::Context * c)
 {
-    c->response()->body() = "Matched Controller::Store in Store.";
+    c->response()->body() = "{}";
+}
+
+void Store::order(Cutelyst::Context * c)
+{
+    c->response()->body() = "{}";
 }

@@ -9,6 +9,9 @@ public:
     explicit Pet(QObject * parent = 0);
     ~Pet();
 
-    C_ATTR(index, :Path(/pet) :AutoArgs)
-    void index(Cutelyst::Context * c);
+    C_ATTR(get, :Path(/v2/pet) :AutoArgs)
+    void get(Cutelyst::Context * c, const QString & petId);
+
+    C_ATTR(findByStatus, :Path(/v2/pet/findByStatus) :AutoArgs)
+    void findByStatus(Cutelyst::Context * c);
 };

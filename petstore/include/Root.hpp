@@ -10,7 +10,7 @@ public:
     explicit Root(QObject * parent = 0);
     ~Root();
 
-    C_ATTR(index, :Path :AutoArgs)
+    C_ATTR(index, :Path(/v2) :AutoArgs)
     void index(Cutelyst::Context * c);
 
     C_ATTR(defaultPage, :Path)
