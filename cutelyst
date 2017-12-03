@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
+PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+STAGING_DIR="${PROJECT_DIR}/staging"
+
 export MULTIARCH=${MULTIARCH:-`gcc -dumpmachine`}
 #export MULTIARCH=${MULTIARCH:-`dpkg-architecture | grep DEB_HOST_MULTIARCH | sed 's/DEB_HOST_MULTIARCH=//g'`}
 export QT_SYSROOT=/opt/Qt5.9.3/5.9.3/gcc_64
-export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${QT_SYSROOT}/lib:./staging/lib:./staging/lib/${MULTIARCH}
-./staging/bin/cutelyst $*
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${QT_SYSROOT}/lib:${STAGING_DIR}/lib:${STAGING_DIR}/lib/${MULTIARCH}
+${STAGING_DIR}/bin/cutelyst $*

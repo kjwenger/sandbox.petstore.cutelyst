@@ -1,0 +1,13 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: stretch:9.2
+    steps:
+      - checkout
+      - run:
+          name: Install prerequisites
+          command: ./scripts/setup/prerequisites.sh
+      - run:
+          name: Build petstore
+          command: ./scripts/app.sh
