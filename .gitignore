@@ -38,7 +38,7 @@
 # Build
 /cmake-build-*
 /staging
-/build-*
+/build*
 
 # IDEs
 /.idea/workspace.xml
