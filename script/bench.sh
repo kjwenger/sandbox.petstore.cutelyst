@@ -12,8 +12,7 @@ BUILD_DIR=${BUILD_DIR:-${PROJECT_DIR}/build}
 LOG_FILE=${LOG_FILE:-${PROJECT_DIR}/bench.log}
 
 cd "${PROJECT_DIR}"
-./cutelyst --restart --server --app-file "${BUILD_DIR}/petstore/src/libpetstore.so" -- --chdir .. 1>cutelyst.log 2>&1 &
-sleep 2
-artillery quick --count 100 -n 200 http://localhost:3000/v2/pet/1 2>&1 | tee "${LOG_FILE}"
-pkill cutelyst
+echo "" > "${LOG_FILE}"
+"${SCRIPTS_DIR}/bench-artillery.sh"
+"${SCRIPTS_DIR}/bench-wrk.sh"
 cd "${CURRENT_DIR}"
