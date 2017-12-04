@@ -11,6 +11,6 @@ STAGING_DIR="${PROJECT_DIR}/staging"
 BUILD_DIR="${PROJECT_DIR}/build"
 
 cd "${PROJECT_DIR}"
-"${SCRIPTS_DIR}/build-all.sh"
+"${SCRIPTS_DIR}/build.sh"
 "${SCRIPTS_DIR}/run.sh"
 cd "${CURRENT_DIR}"
