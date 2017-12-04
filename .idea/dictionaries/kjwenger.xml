@@ -4,10 +4,13 @@
       <w>aeiou</w>
       <w>cpus</w>
       <w>cutelyst</w>
+      <w>dcmake</w>
       <w>doggie</w>
       <w>dpkg</w>
       <w>libpetstore</w>
+      <w>minsizerel</w>
       <w>petstore</w>
+      <w>relwithdebinfo</w>
       <w>thirdparty</w>
     </words>
   </dictionary>
