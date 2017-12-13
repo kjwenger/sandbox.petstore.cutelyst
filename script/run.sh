@@ -2,8 +2,6 @@
 
 #set -x
 
-CPUS=$(lscpu | grep "^CPU(s):" | sed s/"CPU(s):                "//)
-
 CURRENT_DIR="$(pwd)"
 SCRIPTS_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_DIR="$(dirname "${SCRIPTS_DIR}")"
